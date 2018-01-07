@@ -27,6 +27,11 @@ int main(void) {
 		printf("%d", i);
 	printf("\n");
 
+	printf("\n");
+	printf("\n");
+	printf("Guessing The Internals...\n");
+	printf("\n");
+
 	printf("Address of vector:        %p\n", &vector);
 	//printf("Vector as pointer: %p\n", vector);
 	printf("Vector as pointer:        n/a\n");
