@@ -25,8 +25,17 @@ int main(void) {
 	printf("man.first:            %d\n", man.first);
 	printf("\n");
 	printf("Ridiculous C++ implicit conversion stuff goin' on. #ask_ray\n");
+	printf("\n");
+	printf("Actually printf is just reading the first four bytes of ho...\n");
+	printf("\n");
+	printf("Q. Doesn't printf doesn't need to know the address of ho to\n");
+	printf("access its byte sequence?\n");
+	printf("A. Reading a byte sequence doesn't mean having a reference to\n");
+	printf("the original byte sequence. You just need a copy of the same\n");
+	printf("byte sequence - which is exactly what pass-by-value does\n");
+	printf(">> type ho = *((type*) &data)\n");
 
-	// TODO: Ask Ray
+
 	
 	printf("\n");
 	
