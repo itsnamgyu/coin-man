@@ -1,0 +1,45 @@
+#include <cstdio>
+#include <vector>
+#include <algorithm>
+
+class Box {
+	private:
+		int width;
+		int height;
+		int depth;
+		std::vector<Box> smallerBoxes;
+		
+	public:
+		Box(FILE* stream) {
+			fscanf(stream, "%d %d %d", &width, &height, &depth);
+		}
+		
+		Box(int width, int height, int depth) {
+			this->width = width;
+			this->height = height;
+			this->depth = depth;
+		}
+		
+		void addIfSmaller(Box box) {
+			if (box.width < width && box.height < height && box.depth < depth)
+				smallerBoxes.push(box)
+		}
+
+		void print(FILE* stream) {
+			fprintf(stream, "box(%d, %d, %d)\n", width, height, depth);
+		}
+};
+
+int main(void) {
+	int n;
+	scanf("%d", &n);
+	
+	std::vector<Box> boxes;
+	for (int i = 0; i < n; ++i)
+		smallerBoxes.push(Box(stdin));
+
+	std::sort(boxes.start(), boxes.end());
+	for (auto const& box : boxes) {
+		printf("%d\n", box.width);
+	}
+}
